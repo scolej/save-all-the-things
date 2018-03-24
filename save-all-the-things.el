@@ -29,7 +29,7 @@
 
 (defun satt--saver (buffer)
   "Save BUFFER, if it still exists."
-  (when buffer
+  (when (buffer-live-p buffer)
     (with-current-buffer buffer
       (cond
        ((not (buffer-modified-p)) ;; No changes.
