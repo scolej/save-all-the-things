@@ -79,6 +79,8 @@ Add it to your MODE-LINE-FORMAT list like so:
   (if save-all-the-things-mode
       (progn (add-hook 'post-command-hook 'satt--timer-setter nil t)
              (add-hook 'after-change-functions 'satt--after-change nil t))
+    ;; Disable the mode!
+    (cancel-timer satt--timer)
     (remove-hook 'post-command-hook 'satt--timer-setter t)
     (remove-hook 'after-change-functions 'satt--after-change t)))
 
