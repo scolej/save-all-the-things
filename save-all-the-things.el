@@ -39,8 +39,7 @@
         (setq-local satt--state 'badly-frustrated))
        (t
         (let ((inhibit-message t)) (basic-save-buffer nil))
-        (setq-local satt--state 'all-sweet))))
-    (force-mode-line-update)))
+        (setq-local satt--state 'all-sweet))))))
 
 (defun satt-should-enable (buffer)
   "Decide if we should start saving for the given buffer."
