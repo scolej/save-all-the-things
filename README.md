@@ -11,8 +11,14 @@ Use it manually:
 
 Or enable it automatically like so:
 
-    (add-hook 'after-save-hook #'satt-enable-or-disable)
     (add-hook 'find-file-hook #'satt-enable-or-disable)
 
 `satt-enable-or-disable` will enable auto-saving if the buffer has a
 matching file and is tracked by Git.
+
+# TODO
+
+- Is VCS-conditional-enable good or not?
+- How to integrate with something like dired-query-replace? It doesn't set the timer.
+- Why doesn't it work properly with my git-commmit-ticket-auto-insert hook?
+- C-c C-c in commit mode should write first?
